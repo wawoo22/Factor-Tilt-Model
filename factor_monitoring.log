@@ -1,0 +1,17 @@
+2025-09-25 18:16:51,629 - INFO - Database initialized successfully
+2025-09-25 18:16:51,629 - INFO - Starting daily factor data collection
+2025-09-25 18:16:52,275 - INFO - Collected data for Value (VTV)
+2025-09-25 18:16:52,524 - INFO - Collected data for Growth (VUG)
+2025-09-25 18:16:52,732 - INFO - Collected data for Quality (QUAL)
+2025-09-25 18:16:52,906 - INFO - Collected data for Momentum (MTUM)
+2025-09-25 18:16:53,126 - INFO - Collected data for Low_Volatility (USMV)
+2025-09-25 18:16:53,291 - INFO - Collected data for Size (VB)
+2025-09-25 18:16:53,488 - INFO - Collected data for Market (SPY)
+2025-09-25 18:16:54,008 - INFO - Collected data for Small_Cap (IWM)
+2025-09-25 18:16:54,426 - INFO - Collected data for High_Dividend (VYM)
+2025-09-25 18:16:54,550 - INFO - Collected data for VIX
+2025-09-25 18:16:54,678 - INFO - Collected data for TNX
+2025-09-25 18:16:54,880 - INFO - Collected data for TYX
+2025-09-25 18:16:55,068 - INFO - Collected data for DXY
+2025-09-25 18:16:55,080 - INFO - Price data stored in database
+2025-09-25 18:16:55,080 - ERROR - No data collected, exiting

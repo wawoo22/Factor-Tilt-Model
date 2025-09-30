@@ -1,0 +1,32 @@
+# Factor Performance Study
+# Save as "FactorPerformance" in thinkorswim
+
+declare lower;
+
+input factor1Symbol = "VTV";
+input factor2Symbol = "VUG";
+input benchmarkSymbol = "SPY";
+input lookbackPeriod = 252;
+
+def factor1Price = close(factor1Symbol);
+def factor2Price = close(factor2Symbol);
+def benchmarkPrice = close(benchmarkSymbol);
+
+def factor1Return = (factor1Price / factor1Price[lookbackPeriod] - 1) * 100;
+def factor2Return = (factor2Price / factor2Price[lookbackPeriod] - 1) * 100;
+def benchmarkReturn = (benchmarkPrice / benchmarkPrice[lookbackPeriod] - 1) * 100;
+
+def factor1Excess = factor1Return - benchmarkReturn;
+def factor2Excess = factor2Return - benchmarkReturn;
+
+plot Factor1 = factor1Excess;
+plot Factor2 = factor2Excess;
+plot ZeroLine = 0;
+
+Factor1.SetDefaultColor(GetColor(5));
+Factor2.SetDefaultColor(GetColor(1));
+ZeroLine.SetDefaultColor(GetColor(8));
+
+AddLabel(yes, factor1Symbol + " vs " + benchmarkSymbol + ": " + 
+         Round(factor1Excess, 2) + "%", 
+         if factor1Excess > 0 then Color.GREEN else Color.RED);
